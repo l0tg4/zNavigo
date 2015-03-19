@@ -42,10 +42,50 @@
    </property>
    <widget class="QMenu" name="menuTest">
     <property name="title">
-     <string>Test</string>
+     <string>Fichier</string>
+    </property>
+    <addaction name="actionNouvel_onglet"/>
+    <addaction name="actionNouvelle_fen_tre"/>
+    <addaction name="actionOuvrir_un_fichier"/>
+   </widget>
+   <widget class="QMenu" name="menu_dition">
+    <property name="title">
+     <string>Édition</string>
     </property>
    </widget>
+   <widget class="QMenu" name="menuAffichage">
+    <property name="title">
+     <string>Affichage</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuHistorique">
+    <property name="title">
+     <string>Historique</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuMarque_pages">
+    <property name="title">
+     <string>Marque-pages</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuOutils">
+    <property name="title">
+     <string>Outils</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>?</string>
+    </property>
+    <addaction name="action_propos"/>
+   </widget>
    <addaction name="menuTest"/>
+   <addaction name="menu_dition"/>
+   <addaction name="menuAffichage"/>
+   <addaction name="menuHistorique"/>
+   <addaction name="menuMarque_pages"/>
+   <addaction name="menuOutils"/>
+   <addaction name="menu"/>
   </widget>
   <widget class="QToolBar" name="toolBar">
    <property name="windowTitle">
@@ -55,9 +95,29 @@
     <enum>TopToolBarArea</enum>
    </attribute>
    <attribute name="toolBarBreak">
-    <bool>true</bool>
+    <bool>false</bool>
    </attribute>
   </widget>
+  <action name="actionNouvel_onglet">
+   <property name="text">
+    <string>Nouvel onglet</string>
+   </property>
+  </action>
+  <action name="actionNouvelle_fen_tre">
+   <property name="text">
+    <string>Nouvelle fenêtre</string>
+   </property>
+  </action>
+  <action name="actionOuvrir_un_fichier">
+   <property name="text">
+    <string>Ouvrir un fichier</string>
+   </property>
+  </action>
+  <action name="action_propos">
+   <property name="text">
+    <string>À propos</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>
