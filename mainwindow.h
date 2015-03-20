@@ -4,20 +4,57 @@
 #include <QtWebKitWidgets>
 #include <QtWidgets>
 
-namespace Ui {
-class MainWindow;
-}
-
-class MainWindow : public QMainWindow
+class FenPrincipale : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    explicit MainWindow(QWidget *parent = 0);
-    ~MainWindow();
+    FenPrincipale();
 
 private:
-    Ui::MainWindow *ui;
+    void createActions();
+    void createMenus();
+    void createToolBars();
+    void createStatusBar();
+    QWidget *createTabWebPage(QString url = "");
+    QWebView *actualPage();
+
+private slots:
+    void previous();
+    void next();
+    void home();
+    void stop();
+    void refresh();
+
+    void about();
+    void newTab();
+    void closeTab();
+    void loadPage();
+    void changeTab(int index);
+    void changeTitle(const QString & fullTitle);
+    void changeUrl(const QUrl & url);
+
+    void startLoad();
+    void progressLoad(int pourcentage);
+    void finishLoad(bool ok);
+
+private:
+    QTabWidget *tabs;
+
+    QAction *actionNewTab;
+    QAction *actionCloseTab;
+    QAction *actionQuit;
+    QAction *actionAbout;
+    QAction *actionPrevious;
+    QAction *actionNext;
+    QAction *actionStop;
+    QAction *actionRefresh;
+    QAction *actionHome;
+    QAction *actionGo;
+
+    QLineEdit *fieldAdress;
+    QProgressBar *progress;
+
 };
 
 #endif // MAINWINDOW_H
